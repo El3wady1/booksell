@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع عرض الكتاب</title>
+
+    <!-- إضافة Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- إضافة AOS CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
+</head>
+<body>
+
+    <nav class="navbar"> 
+        <div class="container">
+            <div>
+                <a href="#" class="logo">السيكولوجية الشخصية واختيار الوظائف</a>
+            
+                <!-- زر التنقل للشاشات الصغيرة -->
+                <button class="navbar-toggle" id="navbar-toggle">☰</button>
+                
+            </div>
+          
+            <ul class="nav-links" id="nav-links">
+                <li>
+                    <a href="#buy">
+                        <img src="icons/shopping-cart.png" alt="buy icon" class="nav-icon"> الطلب
+                    </a>
+                </li>
+                <li>
+                    <a href="#faq">
+                        <img src="icons/asking.png" alt="faq icon" class="nav-icon"> الأسئلة المتكررة
+                    </a>
+                </li>
+                <li>
+                    <a href="#reviews">
+                        <img src="icons/booking.png" alt="reviews icon" class="nav-icon"> المراجعات
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact">
+                        <img src="icons/about.png" alt="contact icon" class="nav-icon"> تواصل معنا
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    
+
+<div class="content">
+    <!-- شريط الإشعارات -->
+    <div class="">
+        <p style="height: 1rem;"> . </p>
+    </div>
+    <div class="notification-bar">
+        <p>خصم خاص: احصل على الكتاب بسعر مخفض اليوم فقط!</p>
+    </div>
+
+    <!-- قسم العد التنازلي للخصم -->
+    <div class="countdown-timer" data-aos="fade-up">
+        <h3>الخصم ينتهي بعد:</h3>
+        <div id="timer">
+            <span id="days"></span> يوم
+            <span id="hours"></span> ساعة
+            <span id="minutes"></span> دقيقة
+            <span id="seconds"></span> ثانية
+        </div>
+    </div>
+
+    <!-- قسم الطلب -->
+    <section id="buy" class="book-section" data-aos="fade-up">
+        <div class="book-info">
+            <img src="assets/cover.png" alt="غلاف الكتاب" class="book-cover animate__animated animate__bounceInLeft">
+            <div class="book-details" data-aos="fade-left">
+                <h2>السيكولوجية الشخصية واختيار الوظائف</h2>
+                <p class="book-description">نبذة قصيرة عن الكتاب، تشرح محتواه وفوائده بشكل مختصر.</p>
+                <a href="#buy" class="btn btn-buy" data-aos="fade-up" data-aos-delay="200">اطلب الآن</a>
+                <p class="book-description">سعر الكتاب: 10 دينار كويتي</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأسئلة المتكررة -->
+    <section id="faq" class="faq-section" data-aos="fade-up">
+        <h2>الأسئلة المتكررة</h2>
+        <div class="faq-item" data-aos="fade-right">
+            <p><strong>لماذا يجب أن أشتري هذا الكتاب؟</strong></p>
+            <p>الكتاب يحتوي على معلومات قيمة تساعدك على تطوير مهاراتك.</p>
+        </div>
+    </section>
+
+    <!-- قسم المراجعات -->
+    <section id="reviews" class="reviews-section" data-aos="fade-up">
+        <h2>مراجعات وتقييمات المستخدمين</h2>
+        <div id="review-list">
+            <!-- سيتم إدراج التقييمات هنا -->
+        </div>
+    </section>
+
+    <!-- قسم إضافة التقييم -->
+    <section class="comment-section" data-aos="fade-up">
+        <h2>أضف تقييمك</h2>
+        <form id="rating-form">
+            <input type="text" name="name" placeholder="اسمك" required>
+            <input type="tel" name="phone" placeholder="رقم هاتفك" required>
+            <textarea name="message" placeholder="أضف تعليقك" required></textarea>
+            <label for="rating">تقييمك:</label>
+            <select name="rating" id="rating" required>
+                <option value="5">⭐⭐⭐⭐⭐</option>
+                <option value="4">⭐⭐⭐⭐</option>
+                <option value="3">⭐⭐⭐</option>
+                <option value="2">⭐⭐</option>
+                <option value="1">⭐</option>
+            </select>
+            <button type="submit" class="btn btn-submit">إرسال التقييم</button>
+        </form>
+    </section>
+
+    <!-- قسم الفيديو الترويجي -->
+    <section class="video-section" data-aos="fade-up">
+        <h2>شاهد الفيديو الترويجي</h2>
+        <video controls>
+            <source src="promo-video.mp4" type="video/mp4">
+            متصفحك لا يدعم تشغيل الفيديو.
+        </video>
+    </section>
+
+    <!-- قسم الاتصال -->
+    <section id="contact" class="contact-section" data-aos="fade-up">
+        <h2>تواصل معنا</h2>
+            <form action="https://formsubmit.co/trackingstudentapp@gmail.com" method="POST">
+                <input type="text" name="name" placeholder="اسمك" required>
+                <input type="email" name="email" placeholder="الايميل" required>
+                <input type="text"  placeholder="رسالتك" name="message placeholder=" write your required>
+            
+                <input type="hidden" name="_subject" value="New Email!" required>
+
+
+
+                <input type="hidden" name="_captcha" value="false">
+
+
+                <button type="submit" class="btn btn-submit">إرسال الرسالة</button>
+
+            </form>
+    </section>
+
+    <!-- قسم التواصل الاجتماعي -->
+    <div class="social-media" data-aos="fade-up">
+        <h2>تابعنا على مواقع التواصل الاجتماعي</h2>
+        <a href="https://facebook.com" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+        <a href="https://twitter.com" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a>
+        <a href="https://instagram.com" target="_blank"><img src="icons/social.png" alt="Instagram"></a>
+    </div>
+
+    <!-- زر واتساب منبثق -->
+    <a href="https://wa.me/+2001094646648" class="whatsapp-button" target="_blank">
+        <img src="icons/whats.png" alt="تواصل عبر واتساب">
+    </a>
+</div>
+
+<!-- إضافة AOS JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({ duration: 1200 });
+</script>
+
+<!-- إعداد العداد التنازلي -->
+<script>
+    const endDate = new Date("2024-10-30T23:59:59").getTime();
+    const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const timeLeft = endDate - now;
+
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
+
+        if (timeLeft < 0) {
+            clearInterval(countdown);
+            document.getElementById("timer").textContent = "انتهى الخصم";
+        }
+    }, 1000);
+</script>
+
+<!-- JavaScript لمعالجة التقييمات -->
+<script>
+    // تحميل التقييمات المخزنة عند فتح الصفحة
+    document.addEventListener("DOMContentLoaded", function() {
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.forEach(review => {
+            addReviewToDOM(review.name, review.message, review.rating);
+        });
+    });
+
+    // وظيفة لإضافة التقييم إلى DOM
+    function addReviewToDOM(name, message, rating) {
+        const reviewElement = document.createElement("div");
+        reviewElement.classList.add("review");
+        reviewElement.innerHTML = `<p><strong>${name}:</strong> ${message} ${'⭐'.repeat(rating)}</p>`;
+        document.getElementById("review-list").appendChild(reviewElement);
+    }
+
+    // معالجة إرسال التقييم
+    document.getElementById("rating-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const name = event.target.name.value;
+        const message = event.target.message.value;
+        const rating = event.target.rating.value;
+
+        // إضافة التقييم إلى localStorage
+        const reviews = JSON.parse(localStorage.getItem("reviews")) || [];
+        reviews.push({ name, message, rating });
+        localStorage.setItem("reviews", JSON.stringify(reviews));
+
+        addReviewToDOM(name, message, rating);
+        event.target.reset();
+    });
+    function toggleDrawer() {
+            document.getElementById("drawer").classList.toggle("open");
+        }
+        document.getElementById("navbar-toggle").addEventListener("click", function() {
+    var navLinks = document.getElementById("nav-links");
+    navLinks.classList.toggle("active"); // تضيف أو تزيل فئة "active" بناءً على الحالة الحالية
+});
+</script>
+
+
+</body>
+</html>
